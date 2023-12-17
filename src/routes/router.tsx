@@ -5,6 +5,7 @@ import { Page } from '../components/pages/Page'
 import { dataState } from '../data/dataState'
 import {ProtectedPage} from '../components/pages/ProtectedPage';
 import {ProtectedRoute} from './ProtectedRoute';
+import {PageInPage} from '../components/pages/PageInPage';
 
 export const router = createBrowserRouter([
 	{
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
 				element: (
 					<Error404/>
 				),
+			},
+			{
+				path: '/page/:id/pip',
+				element: <PageInPage/>,
 			},
 		],
 	},
